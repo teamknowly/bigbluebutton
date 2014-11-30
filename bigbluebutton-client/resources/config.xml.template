@@ -7,18 +7,19 @@
     <porttest host="HOST" application="video/portTest" timeout="10000"/>    
     <bwMon server="HOST" application="video/bwTest"/>
     <application uri="rtmp://HOST/bigbluebutton" host="http://HOST/bigbluebutton/api/enter" />
-    <language userSelectionEnabled="true" />
+    <language userSelectionEnabled="false" />
     <skinning enabled="true" url="http://HOST/client/branding/css/BBBDefault.css.swf" />
-    <shortcutKeys showButton="true" />
-    <layout showLogButton="false" showVideoLayout="false" showResetLayout="true" defaultLayout="bbb.layout.name.defaultlayout"
-            showToolbar="true" showFooter="true" showMeetingName="true" showHelpButton="true" 
-            showLogoutWindow="true" showLayoutTools="true" showNetworkMonitor="false" confirmLogout="true"
+    <shortcutKeys showButton="false" />
+    <layout showLogButton="false" showVideoLayout="false" showResetLayout="false" defaultLayout="bbb.layout.name.defaultlayout"
+            showToolbar="true" showFooter="false" showMeetingName="false" showHelpButton="false" 
+            showLogoutWindow="false" showLayoutTools="false" showNetworkMonitor="false" confirmLogout="true"
             showRecordingNotification="true"/>
     <lock allowModeratorLocking="false" disableCamForLockedUsers="false" disableMicForLockedUsers="false" disablePrivateChatForLockedUsers="false" 
           disablePublicChatForLockedUsers="false" lockLayoutForLockedUsers="false"/>
             
 		<modules>
-		 
+
+<!--		 
 		<module name="ChatModule" url="http://HOST/client/ChatModule.swf?v=VERSION" 
 			uri="rtmp://HOST/bigbluebutton" 
 			dependsOn="UsersModule"	
@@ -27,6 +28,8 @@
 			baseTabIndex="701"
 			colorPickerIsVisible="false"
 		/>
+-->
+
 
 		<module name="UsersModule" url="http://HOST/client/UsersModule.swf?v=VERSION" 
 			uri="rtmp://HOST/bigbluebutton" 
@@ -36,7 +39,8 @@
 			baseTabIndex="301"
 		/>
 
-		
+
+<!--		
 		<module name="DeskShareModule" 
 			url="http://HOST/client/DeskShareModule.swf?v=4105" 
 			uri="rtmp://HOST/deskShare"
@@ -45,17 +49,19 @@
 			autoFullScreen="false"
 			baseTabIndex="201"
 		/>
+-->
+
 		
 		<module name="PhoneModule" url="http://HOST/client/PhoneModule.swf?v=VERSION" 
 			uri="rtmp://HOST/sip" 
-			autoJoin="true"
-			listenOnlyMode="true"
+			autoJoin="false"
+			listenOnlyMode="false"
 			forceListenOnly="false"
 			presenterShareOnly="false"
-			skipCheck="false"
+			skipCheck="true"
 			showButton="true"
 			enabledEchoCancel="true"
-			useWebRTCIfAvailable="true"
+			useWebRTCIfAvailable="false"
 			showPhoneOption="false"
 			echoTestApp="9196"
 			dependsOn="UsersModule"
@@ -69,7 +75,7 @@
 			controlsForPresenter = "false"
 			resolutions = "320x240,640x480,1280x720"
 			autoStart = "false"
-			skipCamSettingsCheck="false"
+			skipCamSettingsCheck="true"
 			showButton = "true"
 			showCloseButton = "true"
 			publishWindowVisible = "true"
@@ -98,7 +104,7 @@
 			dependsOn="PresentModule"
 			baseTabIndex="601"
 			whiteboardAccess="presenter"
-			keepToolbarVisible="false"
+			keepToolbarVisible="true"
 		/>
 <!--
 
