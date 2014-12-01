@@ -58,7 +58,7 @@
 			listenOnlyMode="false"
 			forceListenOnly="false"
 			presenterShareOnly="false"
-			skipCheck="true"
+			skipCheck="false"
 			showButton="true"
 			enabledEchoCancel="true"
 			useWebRTCIfAvailable="false"
